@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#visualization {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#filters {
+    width: 250px;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    height: 17px;
+    padding: 2px;
+    font: 14px Monospace;
+    background: rgb(166, 230, 198);
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.rating-button {
+    background-color: #f0b8ff; /* A pleasant yellow */
+    border: none;
+    border-radius: 5px; /* Fully rounded edges */
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Monospace;
+    margin: 4px 2px;
+}
+
+.rating-button:hover, .rating-button:focus {
+    background-color: #76e1d0; /* A slightly darker yellow for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rating-button:active {
+    background-color: #5fc2b1; /* An even darker yellow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+#rating-button-container {
+    margin-top: 0; /* Adjust this value to reduce space above the buttons */
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 5px; /* Adjust this value to change the space between buttons */
+}
+
+.filter-title, .filter-checkbox {
+    background-color: #f0b8ff; /* Background color */
+    border: none;
+    border-radius: 5px; /* Rounded edges */
+    color: white;
+    padding: 2px;
+    text-align: left;
+    display: block; /* Change to block for stacking */
+    font-size: 15px;
+    margin-bottom: 4px; /* Space out elements */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Monospace;
+}
+
+.filter-title {
+    background-color: transparent; /* No background for the title */
+    color: rgb(67, 63, 68); /* Dark color for text */
+    padding: 2px;
+    text-align: left;
+    font-size: 15px; /* Slightly larger font size for the title */
+    margin-bottom: 10px; /* Space out the title from the checkboxes */
+    cursor: default; /* The default cursor for non-clickable items */
+    font-weight: bold;
+    font-family: Monospace;
+    box-shadow: none; /* No shadow for the title */
+    margin-bottom: 5px;
+}
+
+.filter-checkbox {
+    background-color: #f0b8ff; /* Background color for checkboxes */
+    border-radius: 5px; /* Rounded edges */
+    color: white;
+    padding: 0;
+    text-align: left;
+    display: block; /* Stack elements */
+    font-size: 13px;
+    margin-bottom: 4px; /* Space between checkboxes */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.filter-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.filter-checkbox label {
+    cursor: pointer;
+    display: block;
+    padding: 3px 5px; /* Add padding to the label for spacing */
+    display: block; /* Ensure the label fills the div */
+    width: 100%; /* Make the label fill the container */
+    box-sizing: border-box; /* Include padding in the label's total width */
+    margin: 4px 0; /* Optional: adjust margin as needed */
+    border-radius: 5px; /* Ensure the rounded edges are on the label */
+
+}
+
+.filter-checkbox:hover {
+    background-color: #76e1d0; /* A slightly darker color for hover state */
+}
+
+.filter-checkbox:active {
+    background-color: #5fc2b1; /* An even darker color for active state */
+}
+
+.filter-checkbox input[type="checkbox"]:checked + label {
+    background-color: #76e1d0; /* Background color when selected */
+    color: white;
+}
+
+#visualization h2 {
+    font-family: 'Monospace', monospace; /* Monospace font */
+    color: rgb(67, 63, 68); /* Dark grey color */
+    text-align: center; /* Center align the text */
+    font-size: 28px; /* Larger font size */
+    margin: 0; /* Reset margin */
+    padding: 10px 0; /* Padding top and bottom */
+}
