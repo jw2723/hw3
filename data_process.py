@@ -7,7 +7,6 @@ boston_data = pd.read_csv('/Users/jingqiwang/Desktop/In Progress/Cornell Univers
 
 # def get_unique_categories(data):
 #     all_categories = []
-    
 #     for categories_json in data['categories_json']:
 #         try:
 #             categories = literal_eval(categories_json)
@@ -15,7 +14,6 @@ boston_data = pd.read_csv('/Users/jingqiwang/Desktop/In Progress/Cornell Univers
 #                 all_categories.append(category[0])
 #         except Exception as e:
 #             print(f"Error parsing categories: {e}")
-    
 #     return set(all_categories)
 
 # unique_categories = get_unique_categories(boston_data)
@@ -23,7 +21,7 @@ boston_data = pd.read_csv('/Users/jingqiwang/Desktop/In Progress/Cornell Univers
 # unique_categories_df.to_csv('/Users/jingqiwang/Desktop/In Progress/Cornell University/INFO 5311 visualization/hw3/unique_categories.csv', index=False)
 # print(unique_categories)
 
-
+# further categorize all labels
 category_groups = {
     'Asian': ('Asian Fusion', 'Chinese', 'Cantonese', 'Japanese', 'Korean', 'Thai', 'Vietnamese', 'Sushi Bars', 'Ramen', 'Hot Pot', 'Dim Sum', 'Mongolian'),
     'Indian': ('Indian', 'Pakistani', 'Himalayan/Nepalese', 'Bangladeshi'),

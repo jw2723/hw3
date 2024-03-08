@@ -1,20 +1,24 @@
+/* general body styling */
 body {
     display: flex;
     margin: 0;
     height: 100vh;
 }
 
+/* styling for the main content area */
 #content {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
+/* styling for the visualization area */
 #visualization {
     flex-grow: 1;
     padding: 10px;
 }
 
+/* styling for the filters section */
 #filters {
     width: 250px;
     border-left: 1px solid #ccc;
@@ -24,12 +28,14 @@ body {
     gap: 10px;
 }
 
+/* styling for SVG graphics */
 svg {
     width: 100%;
     height: auto;
     border: 1px solid #ccc;
 }
 
+/* tooltip styling for hover info */
 .tooltip {
     position: absolute;
     text-align: center;
@@ -43,10 +49,11 @@ svg {
     pointer-events: none;
 }
 
+/* styling for rating buttons */
 .rating-button {
-    background-color: #f0b8ff; /* A pleasant yellow */
+    background-color: #f0b8ff;
     border: none;
-    border-radius: 5px; /* Fully rounded edges */
+    border-radius: 5px;
     color: white;
     padding: 5px 5px;
     text-align: center;
@@ -62,33 +69,35 @@ svg {
     margin: 4px 2px;
 }
 
+/* styling for when the rating button is hovered over or focused */
 .rating-button:hover, .rating-button:focus {
-    background-color: #76e1d0; /* A slightly darker yellow for contrast */
+    background-color: #76e1d0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .rating-button:active {
-    background-color: #5fc2b1; /* An even darker yellow */
+    background-color: #5fc2b1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
 }
 
 #rating-button-container {
-    margin-top: 0; /* Adjust this value to reduce space above the buttons */
+    margin-top: 0;
     display: flex;
-    flex-direction: column; /* Stack the buttons vertically */
-    gap: 5px; /* Adjust this value to change the space between buttons */
+    flex-direction: column;
+    gap: 5px;
 }
 
+/* styling for title and checkboxes */
 .filter-title, .filter-checkbox {
-    background-color: #f0b8ff; /* Background color */
+    background-color: #f0b8ff;
     border: none;
-    border-radius: 5px; /* Rounded edges */
+    border-radius: 5px;
     color: white;
     padding: 2px;
     text-align: left;
-    display: block; /* Change to block for stacking */
+    display: block; /* stacking blocks */
     font-size: 15px;
-    margin-bottom: 4px; /* Space out elements */
+    margin-bottom: 4px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -96,68 +105,73 @@ svg {
     font-family: Monospace;
 }
 
+
 .filter-title {
-    background-color: transparent; /* No background for the title */
-    color: rgb(67, 63, 68); /* Dark color for text */
+    background-color: transparent;
+    color: rgb(67, 63, 68); /* darker color for text */
     padding: 2px;
     text-align: left;
-    font-size: 15px; /* Slightly larger font size for the title */
-    margin-bottom: 10px; /* Space out the title from the checkboxes */
-    cursor: default; /* The default cursor for non-clickable items */
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: default;
     font-weight: bold;
     font-family: Monospace;
-    box-shadow: none; /* No shadow for the title */
+    box-shadow: none; /* no shadow for filter title */
     margin-bottom: 5px;
 }
 
+/* Styling for checkboxes */
 .filter-checkbox {
-    background-color: #f0b8ff; /* Background color for checkboxes */
-    border-radius: 5px; /* Rounded edges */
+    background-color: #f0b8ff;
+    border-radius: 5px;
     color: white;
     padding: 0;
     text-align: left;
-    display: block; /* Stack elements */
+    display: block;
     font-size: 13px;
-    margin-bottom: 4px; /* Space between checkboxes */
+    margin-bottom: 4px; /* space between checkboxes */
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
+/* hide default checkbox input and enhance label */
 .filter-checkbox input[type="checkbox"] {
     display: none;
 }
 
+/* styling for the checkbox with interactivity */
 .filter-checkbox label {
     cursor: pointer;
     display: block;
-    padding: 3px 5px; /* Add padding to the label for spacing */
-    display: block; /* Ensure the label fills the div */
-    width: 100%; /* Make the label fill the container */
-    box-sizing: border-box; /* Include padding in the label's total width */
-    margin: 4px 0; /* Optional: adjust margin as needed */
-    border-radius: 5px; /* Ensure the rounded edges are on the label */
+    padding: 3px 5px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px 0;
+    border-radius: 5px;
 
 }
 
 .filter-checkbox:hover {
-    background-color: #76e1d0; /* A slightly darker color for hover state */
+    background-color: #76e1d0; 
 }
 
 .filter-checkbox:active {
-    background-color: #5fc2b1; /* An even darker color for active state */
+    background-color: #5fc2b1;
 }
-
+ /* when selected */
 .filter-checkbox input[type="checkbox"]:checked + label {
-    background-color: #76e1d0; /* Background color when selected */
+    background-color: #76e1d0;
     color: white;
 }
 
+/* styling for title, same style as labels */
 #visualization h2 {
-    font-family: 'Monospace', monospace; /* Monospace font */
-    color: rgb(67, 63, 68); /* Dark grey color */
-    text-align: center; /* Center align the text */
-    font-size: 28px; /* Larger font size */
-    margin: 0; /* Reset margin */
-    padding: 10px 0; /* Padding top and bottom */
+    font-family: 'Monospace', monospace;
+    color: rgb(67, 63, 68);
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+    padding: 10px 0;
 }
